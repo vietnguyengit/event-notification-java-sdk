@@ -13,7 +13,7 @@ FROM amazoncorretto:8
 
 WORKDIR /app
 
-COPY config.yaml /tmp/config.yaml
+COPY config.yaml ./config.yaml
 COPY --from=builder /app/target/event-notification*.jar /app/app.jar
 
 EXPOSE 8081
